@@ -18,7 +18,8 @@ int kadane(const vector<int> &as){
 }
 
 int main(){
-	vector<int> as = {1, 1, 1, -5, 3, -2, 4};
+	//vector<int> as = {1, 1, 1, -5, 3, -2, 4};
+	vector<int> as = {30, 10, 60, 10, 60, 50};
 
 	cout << "xs = ";
 	for(auto e : as)
