@@ -9,8 +9,9 @@ using namespace std;
 int main(){
 	//prep
 	fastIO;
+	cout << endl << endl;
 
-	ll n, sum=0, count=0;
+	ll n, sum=0;
 	cin >> n;
 
 	vector<ll> as(n);
@@ -24,17 +25,25 @@ int main(){
 
 	//dp
 	for(ll i=0; i<n-1; i++){
-		if(i == count){
-			ll a1 = as[i] * (-1); //Ai
-			sum += a1;
+		ll a1 = as[i] * (-1); //Ai
+		//cout << "i: " << i << " " << "a1: " << a1 << endl;
+		ll a2 = as[i+1] * (-1); //Ai+1
+		//cout << "i: " << i << " " << "a2: " << a2 << endl;
+		for(ll j=0; j<n; j++){
+			if(j == i){
+				sum += a1;
+				cout << "i:" << i << " j:" << j << " a1:" << a1 << " as[]:" << as[j] << " sum:" << sum << endl;
+			}else if(j == i+1){
+				sum += a2;
+				cout << "i+1:" << i+1 << " j:" << j << " a2:" << a2 << " as[]:" << as[j] << " sum:" << sum << endl;
+			}else{
+				sum += as[j];
+				//cout << "others sum: " << sum << endl;
+			}
 		}
-		if(i == count+1){
-			ll a2 = as[i+1] * (-1); //Ai+1
-			sum += a2;
-		}
-		sum += as[i];
-
-		count++;
+		//cout << "i: " << i << " sum: " << sum << endl << endl;
+		dp[i+1] = max(dp[i], sum); 
+		sum = 0;
 	}
 
 	//test @1
