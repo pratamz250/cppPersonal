@@ -1,0 +1,1 @@
+g++ -Wall -std=c++20 a.cpp -o a.x && cat a_input.txt && ./barran.x && ./a.x < a_input.txt > a_myout.txt && cat a_myout.txt && ./barran.x && diff a_myout.txt a_out.txt
