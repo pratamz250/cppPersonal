@@ -12,18 +12,25 @@ int main(){
 
 	int n;
 	cin >> n;
- 		 
-	vector<ll> zs;
+
+	//vector<ll> zs; //integers
+	vector<ll> ans; //not perfect squares
 
 	for(int i=0; i<n; i++){
-		int z;
-		cin >> z;
-		
-		if(sqrt(z) / 10.0 == sqrt(z)){
-			//@1	
-		}
+		int e; //each element of the vector
+		cin >> e;
+	
+		double s = sqrt(e); //square
+		ll z = (ll)s; //integer part of the squares
+		if(s - z != 0.0) ans.push_back(e);
 	}
+
+	sort(ans.begin(), ans.end(), greater<int>());
+
+	//cout << ans[0];
+	cout << ans.at(0);
 
 	cout << endl;
 	return 0;
 }
+

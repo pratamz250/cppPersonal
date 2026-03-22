@@ -1,5 +1,5 @@
 #include <iostream>
-#include <bits/stdc++.h>
+//#include <bits/stdc++.h>
 #define ll long long
 #define ull unsigned long long
 #define oo { 1LL << 62  }
@@ -8,10 +8,11 @@
 using namespace std;
 
 int main(){
-fastIO;
-	
-	
+	fastIO;
 
-cout << endl;
-return 0;
+
+
+	cout << endl;
+	return 0;
 }
+
