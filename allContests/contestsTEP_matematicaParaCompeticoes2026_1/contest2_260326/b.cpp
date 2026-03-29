@@ -1,4 +1,3 @@
-//#include <iostream>
 #include <bits/stdc++.h>
 #define ll long long
 #define ull unsigned long long
@@ -11,19 +10,18 @@ int main(){
 	fastIO;
 
 	int n;
-	cin >> n;	
-
-	vector<int> ns(n);
-
-	if(n % 2 != 0){
-		cout << "contest" << endl;
-		return 0;
-	}
+	string s;
+	cin >> n >> s;		
 
 	for(int i=0; i<n; i++){
 		string s;
 		cin >> s;
+	}
 
+	if(n & 1){
+		cout << "contest";
+	}else{
+		cout << "home";
 	}
 
 	cout << endl;
