@@ -7,12 +7,9 @@
 using namespace std;
 
 int main(){
-	//fastIO;
-
-	ll n;
-	cin >> n;
-
-	cout << n/2520;
+	fastIO;
+		
+	
 
 	cout << endl;
 	return 0;

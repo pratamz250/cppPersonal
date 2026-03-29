@@ -1,4 +1,3 @@
-//#include <iostream>
 #include <bits/stdc++.h>
 #define ll long long
 #define ull unsigned long long
@@ -9,22 +8,26 @@ using namespace std;
 
 int main(){
 	//fastIO;
-	string s;
-	int z;
+	string door;
+	int rail;
 
-	cin >> s;
-	cin >> z;
+	ifstream in("input.txt");
+	ofstream out("output.txt");
 
-	if(s == "front" and z == 1){
-		cout << "L";
-	}else if(s == "front" and z == 2){
-		cout << "R";
-	}else if(s == "back" and z == 1){
-		cout << "R";
-	}else if(s == "back" and z == 2){
-		cout << "L";
-	}
+	in >> door >> rail;
 
+	if(door == "front" and rail == 1)
+		out << "L" << endl;
+	else if(door == "front" and rail == 2)
+		out << "R" << endl;
+	else if(door == "back" and rail == 1)
+		out << "R" << endl;
+	else if(door == "back" and rail == 2)
+		out << "L" << endl;
+
+	in.close();
+	out.close();
+	
 	cout << endl;
 	return 0;
 }
