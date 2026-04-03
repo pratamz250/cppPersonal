@@ -8,7 +8,7 @@ using ull = unsigned long long;
 using vi = vector<int>;
 using vl = vector<ll>;
 constexpr ll oo { 1LL << 62 };
-constexpr ll PRIME { 1'000'000'007 }
+constexpr ll PRIME { 1'000'000'007 };
 constexpr double PI { acos(-1.0) };
 
 int main(){
