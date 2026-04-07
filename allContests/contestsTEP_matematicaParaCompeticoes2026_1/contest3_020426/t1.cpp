@@ -14,20 +14,10 @@ constexpr double PI { acos(-1.0) };
 int main(){
 	fastIO;
 		
-	ll n, m, q=1, r=0, count=0;
-	cin >> n >> m;
-
-	REP(i, 0, m){
-		if(r % q == 0 and r > 0){
-			//cout << r;
-			count++;
-			cout << i << "@ ";
-		}
-		q++;
-		r++;
-	}
-	cout << q << " " << r << " " << count;
+	int i = 9;
+	cout << pow(i, 10);
 
 	cout << endl;
 	return 0;
 }
+

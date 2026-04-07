@@ -14,20 +14,32 @@ constexpr double PI { acos(-1.0) };
 int main(){
 	fastIO;
 		
-	ll n, m, q=1, r=0, count=0;
+	ll n, m, q=1, count=0;
+	vl ans;
 	cin >> n >> m;
 
-	REP(i, 0, m){
-		if(r % q == 0 and r > 0){
-			//cout << r;
-			count++;
-			cout << i << "@ ";
-		}
+	n = pow(2, n);
+	cout << n << endl; //Ok, nao sei como resolver a exponenciacao!
+
+	while(m - n*q >= 0){
+		ans.push_back(m - n*q);
 		q++;
-		r++;
+		//cout << m - n*q << endl;
+		//count++;
+		if(count == 10){
+			cout << "@";
+			exit(1);
+		}
 	}
-	cout << q << " " << r << " " << count;
+
+	sort(ans.begin(), ans.end());
+	cout << ans[0];
+
+	/*for(size_t i=0; i<ans.size(); i++){
+		cout << ans[i] << " ";
+	}*/
 
 	cout << endl;
 	return 0;
 }
+
