@@ -34,6 +34,9 @@ int main(){
 		}else if (n > k and k > 1){
 			cout << "YES" << endl;
 			continue;
+		}else if(n == k and k > 1){
+			cout << "YES" << endl;
+			continue;
 		}else if(n < k and k > 1){
 			cout << "YES" << endl;
 			continue;
