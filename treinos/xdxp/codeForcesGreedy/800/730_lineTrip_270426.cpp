@@ -20,12 +20,19 @@ int main(){
 	while(t--){
 		int n, x;
 		cin >> n >> x;
+		
+		int prev=0, ans=0;
 
-		vi as(n);
-		REP(i, 0, n) cin >> as[i];
+		while(n--){
+			int a;
+			cin >> a;
+			
+			ans = max(ans, a - prev);
+			prev = a;
+		}
+		ans = max(ans, 2*(x - prev));
 
-		if(n > 1) cout << x - n << endl;
-		else if(n == 1) cout << as[0] << endl;
+		cout << ans << endl;
 	}
 
 	//cout << endl;
