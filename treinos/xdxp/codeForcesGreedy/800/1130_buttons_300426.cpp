@@ -9,21 +9,25 @@ int main(int argc, char *argv[]){
 
 	while(t--){
 		vector<long long> bs(3);
+		int a=0, b=0; //Anna e Katie in C button
 
 		for(int i=0; i<3; i++) cin >> bs[i];
 
-		if(bs[2] == 1){
-			bs[0] -= bs[2];
-		}else if(bs[2] & 1){  //impar 
-			bs[1] -= (bs[2] - 1)/2; //Katie
-			bs[0] -= ((bs[2] - 1)/2) - bs[2]; //Anna
-		}else if(!(bs[2] & 1)){ //par
-			long long aux = bs[2] / 2;
-			bs[0] -= aux;
-			bs[1] -= aux;
+		bs[2] & 1 ? a = 1 : b = 1;
+		
+		if(bs[0] == bs[1] and a == 1){
+			cout << "First" << endl;
+			continue;
+		}else if(bs[0] == bs[1] and b == 1){
+			cout << "Second" << endl;
+			continue;
+		}else if(bs[0] > bs[1]){
+			cout << "First" << endl;
+			continue;
+		}else if(bs[0] < bs[1]){
+			cout << "Second" << endl;
+			continue;
 		}
-
-		cout << (bs[0] > bs[1] ? "Second" : "First") << endl;
 	}
 
 	return 0;
