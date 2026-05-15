@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 #define REP(i, a, b) for(int i=a; i<b; i++)
 #define fastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+#define bn '\n'
 
 using namespace std;
 using ll = long long;
@@ -19,6 +20,6 @@ fastIO;
 	
 	
 
-cout << endl;
+cout << bn;
 return 0;
 }
