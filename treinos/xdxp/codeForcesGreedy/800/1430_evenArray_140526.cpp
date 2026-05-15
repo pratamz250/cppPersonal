@@ -15,27 +15,40 @@ constexpr ll PRIME { 1'000'000'007 };
 constexpr double PI { acos(-1.0) };
 
 int main(){
-	//fastIO;
-		
+	fastIO;
+
 	int t;
 	cin >> t;
 
 	while(t--){
 		int n, target=0; 
+
 		cin >> n;
+		if(n == 1){
+			cout << -1 << "\n";
+			continue;
+		}
 
 		vi as(n);
 		REP(i, 0, n){
 			cin >> as[i];
-			if(not(i % 2 == as[i] % 2)){
+			if(i % 2 != as[i] % 2)
 				target++; 
-			}
+
+			cout << i << " " << as[i] << "\n";
 		}
-		if(target & 1){
-			cout << -1 << "\n";
+		//cout << "target: " << target << "\n";
+		if(target == 0){
+			cout << 0 << "\n";
 			continue;
-		}else{
+		}else if(target == 1){ //caso base 
+			cout << 1 << "\n";
+			continue;
+		}else if(not(target & 1)){ //par 
 			cout << target / 2 << "\n";
+			continue;
+		}else if(target & 1 and target != 0){ //impar
+			cout << -1 << "\n";
 			continue;
 		}
 	}
@@ -43,3 +56,4 @@ int main(){
 	//cout << "\n";
 	return 0;
 }
+
