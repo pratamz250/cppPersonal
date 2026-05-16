@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 #define REP(i, a, b) for(int i=a; i<b; i++)
 #define fastIO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+#define bn "\n"
 
 using namespace std;
 using ll = long long;
@@ -21,13 +22,9 @@ int main(){
 	cin >> t;
 
 	while(t--){
-		int n, target=0; 
+		int n, target=0, zeros=0; 
 
 		cin >> n;
-		if(n == 1){
-			cout << -1 << "\n";
-			continue;
-		}
 
 		vi as(n);
 		REP(i, 0, n){
@@ -35,25 +32,36 @@ int main(){
 			if(i % 2 != as[i] % 2)
 				target++; 
 
-			cout << i << " " << as[i] << "\n";
+			if(as[i] == 0) zeros++;
 		}
-		//cout << "target: " << target << "\n";
-		if(target == 0){
-			cout << 0 << "\n";
+
+		if(zeros == n and n > 1){
+			cout << -1 << bn;
 			continue;
-		}else if(target == 1){ //caso base 
-			cout << 1 << "\n";
+		}else if(target == 0){
+			//cout << "1@";
+			cout << 0 << bn;
+			continue;
+		}else if(target == 1 and n > 1){ //caso base 
+			//cout << "2@";
+			cout << 1 << bn;
+			continue;
+		}else if(target == 1 and n == 1){
+			//cout << "3@";
+			cout << -1 << bn;
 			continue;
 		}else if(not(target & 1)){ //par 
-			cout << target / 2 << "\n";
+			//cout << "4@";
+			cout << target / 2 << bn;
 			continue;
-		}else if(target & 1 and target != 0){ //impar
-			cout << -1 << "\n";
+		}else if(target & 1 and target > 1){ //impar
+			//cout << "5@";
+			cout << -1 << bn;
 			continue;
 		}
 	}
 
-	//cout << "\n";
+	//cout << bn;
 	return 0;
 }
 
