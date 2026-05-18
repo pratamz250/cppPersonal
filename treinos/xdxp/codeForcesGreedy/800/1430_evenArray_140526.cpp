@@ -22,43 +22,24 @@ int main(){
 	cin >> t;
 
 	while(t--){
-		int n, target=0, zeros=0; 
-
+		int n, e=0, o=0;
 		cin >> n;
 
 		vi as(n);
+
 		REP(i, 0, n){
 			cin >> as[i];
-			if(i % 2 != as[i] % 2)
-				target++; 
 
-			if(as[i] == 0) zeros++;
+			if(not(i & 1) != not(as[i] & 1)){
+				if(not(i & 1)) e++;
+				else o++;	
+			}
 		}
 
-		if(zeros == n and n > 1){
+		if(o != e)
 			cout << -1 << bn;
-			continue;
-		}else if(target == 0){
-			//cout << "1@";
-			cout << 0 << bn;
-			continue;
-		}else if(target == 1 and n > 1){ //caso base 
-			//cout << "2@";
-			cout << 1 << bn;
-			continue;
-		}else if(target == 1 and n == 1){
-			//cout << "3@";
-			cout << -1 << bn;
-			continue;
-		}else if(not(target & 1)){ //par 
-			//cout << "4@";
-			cout << target / 2 << bn;
-			continue;
-		}else if(target & 1 and target > 1){ //impar
-			//cout << "5@";
-			cout << -1 << bn;
-			continue;
-		}
+		else 
+			cout << o << bn;
 	}
 
 	//cout << bn;
