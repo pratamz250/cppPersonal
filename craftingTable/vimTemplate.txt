@@ -1,0 +1,110 @@
+" ===== Colas =====
+" Checar versão de melhor suporte:
+" vim --version | grep clipboard
+"
+" Para atualizar:
+" sudo apt install vim-gtk3
+"
+" Copiar todas as linhas para teclado:
+" :%y+
+"
+" Copiar trecho selecionado para teclado:
+" "+y+Enter
+"
+" Apagar parte direita da linha em relação ao cursor:
+" C
+"
+" Apagar parte esquerda da linha em relação ao cursor:
+" Ctrl + u
+"
+" Nova linha:
+" o
+"
+" Apagar palavra inteira:
+" Ctrl+w
+"
+" Comprimir linhas:
+" selecione com Shift+V, depois, na primeira linha selecionada, zf
+" Para abrir e fechar:
+" za
+"
+" Para ir pro começo da linha no primeiro caracter: 
+" ^+Enter
+"
+" Para ir pro final da linha já em modo inserção:
+" A
+"
+" Colocar a linha do cursor no topo da tela:
+" zt
+"
+" Colocar a linha do cursor no inferior da tela:
+" zb
+"
+" Destacar várias linhas:
+" :match Search "alvo"
+" Várias palavras:
+" :match Search "alvo\|alvo\|alvo"
+"
+" Alterar várias palavras:
+" :%s/alvo/alvo/g
+"
+" Cursor na primeira linha:
+" gg
+"
+" Cursor na última linha: 
+" GG
+"
+" Voltar para o último lugar editado:
+" gi
+"
+" Trocar palavra: 
+" cw
+" 
+" Replace caractere
+" r+digita caractere
+"
+" Juntar linhas:
+" J
+"
+" Duplicar linha:
+" yyp
+"
+" Apagar linha:
+" dd
+"
+" Copiar linha:
+" yy
+"
+" Colar:
+" p
+"
+" Buscar palavra em cima do cursor:
+" Baixo: *
+" Cima: #
+"
+" Próxima ocorrência / anterior:
+"n
+"N
+"
+" Split:
+" Horizontal: :split
+" Vertical: :vsplit
+" Navegar:
+" Ctrl+w h
+" Ctrl+w j
+" Ctrl+w k
+" Ctrl+w l
+" Fechar split:
+" :q
+
+" ===== Congigurações =====
+syntax on
+filetype plugin indent on
+set autoindent
+set smartindent
+
+set number
+set norelativenumber
+
+set ts=5
+set sw=5
