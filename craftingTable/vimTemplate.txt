@@ -27,6 +27,8 @@
 " selecione com Shift+V, depois, na primeira linha selecionada, zf
 " Para abrir e fechar:
 " za
+" Para excluir todos os buffers:
+" zE
 "
 " Para ir pro começo da linha no primeiro caracter: 
 " ^+Enter
