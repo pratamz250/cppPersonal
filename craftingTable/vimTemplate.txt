@@ -17,8 +17,10 @@
 " Apagar parte esquerda da linha em relação ao cursor:
 " Ctrl + u
 "
-" Nova linha:
+" Nova linha abaixo:
 " o
+" Nova linha acima:
+" O
 "
 " Apagar palavra inteira:
 " Ctrl+w
