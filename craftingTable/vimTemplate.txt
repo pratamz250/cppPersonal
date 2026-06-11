@@ -98,6 +98,10 @@
 " Ctrl+w l
 " Fechar split:
 " :q
+"
+" Pular para a primeira linha sem conteúdo a partir de onde o cursor está:
+" Cima: shift+{
+" Baixo: shift+}
 
 " ===== Congigurações =====
 syntax on
