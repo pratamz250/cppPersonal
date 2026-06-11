@@ -15,8 +15,9 @@ constexpr ll oo { 1LL << 62 };
 constexpr ll PRIME { 1'000'000'007 };
 constexpr double PI { acos(-1.0) };
 
-void solve(){
+int solve(){
 
+return 0;
 }
 
 int main(){
