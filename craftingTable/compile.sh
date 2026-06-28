@@ -8,7 +8,7 @@
 # Version    : 1.0.0
 # Author     : pratamz250
 # License    : MIT
-# Repository : https://github.com/<your-username>/compile.sh
+# Repository : https://github.com/pratamz250/cppPersonal/blob/main/craftingTable/compile.sh
 #
 # Features
 # --------
