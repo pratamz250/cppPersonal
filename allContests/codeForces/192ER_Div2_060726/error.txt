@@ -1,0 +1,56 @@
+=================================================================
+==16002==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60200000002c at pc 0x5d4583e530a2 bp 0x7ffea632a6d0 sp 0x7ffea632a6c0
+READ of size 4 at 0x60200000002c thread T0
+    #0 0x5d4583e530a1 in solve() /home/isaac/cppPersonal/allContests/codeForces/192ER_Div2_060726/a.cpp:28
+    #1 0x5d4583e53786 in main /home/isaac/cppPersonal/allContests/codeForces/192ER_Div2_060726/a.cpp:43
+    #2 0x7f107f629d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #3 0x7f107f629e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #4 0x5d4583e52524 in _start (/home/isaac/cppPersonal/allContests/codeForces/192ER_Div2_060726/a.out+0xb524) (BuildId: 4e6b22a0b9e0f2aafcfb78ac03748bd3c85ce5bf)
+
+0x60200000002c is located 4 bytes before 4-byte region [0x602000000030,0x602000000034)
+allocated by thread T0 here:
+    #0 0x7f10806dfba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5d4583e56d68 in std::__new_allocator<int>::allocate(unsigned long, void const*) /usr/include/c++/12/bits/new_allocator.h:137
+    #2 0x5d4583e56e15 in std::allocator<int>::allocate(unsigned long) /usr/include/c++/12/bits/allocator.h:188
+    #3 0x5d4583e56e15 in std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) /usr/include/c++/12/bits/alloc_traits.h:464
+    #4 0x5d4583e56e15 in std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) /usr/include/c++/12/bits/stl_vector.h:378
+    #5 0x5d4583e56e15 in std::_Vector_base<int, std::allocator<int> >::_M_create_storage(unsigned long) /usr/include/c++/12/bits/stl_vector.h:395
+    #6 0x5d4583e571b0 in std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) /usr/include/c++/12/bits/stl_vector.h:332
+    #7 0x5d4583e571b0 in std::vector<int, std::allocator<int> >::vector(unsigned long, std::allocator<int> const&) /usr/include/c++/12/bits/stl_vector.h:552
+    #8 0x5d4583e52838 in solve() /home/isaac/cppPersonal/allContests/codeForces/192ER_Div2_060726/a.cpp:23
+    #9 0x5d4583e53786 in main /home/isaac/cppPersonal/allContests/codeForces/192ER_Div2_060726/a.cpp:43
+    #10 0x7f107f629d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/isaac/cppPersonal/allContests/codeForces/192ER_Div2_060726/a.cpp:28 in solve()
+Shadow bytes around the buggy address:
+  0x601ffffffd80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x601ffffffe00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x601ffffffe80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x601fffffff00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x601fffffff80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x602000000000: fa fa fd fa fa[fa]04 fa fa fa fa fa fa fa fa fa
+  0x602000000080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x602000000100: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x602000000180: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x602000000200: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x602000000280: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==16002==ABORTING
