@@ -17,7 +17,7 @@
 #   --sanitize      Enable AddressSanitizer and UBSanitizer
 #   --compile-only  Do not execute after compilation
 #   --verbose       Show compilation information
-#   --clean         Remove *.out from current directory
+#   --clean         Remove *.out and *.x from current directory
 #   -h, --help      Show this help
 #
 # How to use:
@@ -77,7 +77,8 @@ check_compiler() {
 
 clean() {
     rm -f *.out
-    echo "Removed *.out files."
+    rm -f *.x
+    echo "Removed *.out and *.x files."
 }
 
 # Arguments parsing
