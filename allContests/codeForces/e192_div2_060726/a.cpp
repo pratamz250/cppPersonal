@@ -4,7 +4,7 @@
 #define bn '\n'
 
 using namespace std;
-using ll = long long;
+	using ll = long long;
 using ull = unsigned long long;
 using vi = vector<int>;
 using vll = vector<ll>;
@@ -16,24 +16,22 @@ constexpr ll PRIME { 1'000'000'007 };
 constexpr double PI { acos(-1.0) };
 
 int solve(){
-	int k;
+	int k, flag=0;
 
 	cin >> k;
 
 	vi cs(k);
-	REP(i, 0, k) cin >> cs[i];
-
-	sort(cs.begin(), cs.end());
-
-	if(k == 1 and cs.size() == 1 and cs[0] == 1){
-		cout << "No" << bn;
-	}else if(k == 1 and cs.size() == 1 and cs[0] >= 3){
-		cout << "Yes" << bn;
-	}else if(*(cs.end() - 1) >= 2 and *(cs.end() - 2) >= 2){
-		cout << "Yes" << bn;
-	}else{
-		cout << "No" << bn;
+	REP(i, 0, k){
+		cin >> cs[i];
+		if(cs[i] == 2) flag++;
 	}
+
+	sort(cs.rbegin(), cs.rend());
+
+	if(cs[0] > 2 or flag > 1)
+		cout << "YES" << bn;
+	else 
+		cout << "NO" << bn;
 
 	return 0;
 }

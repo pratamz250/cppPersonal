@@ -20,16 +20,33 @@ int solve(){
 
 	cin >> h >> w;
 
+	vi l, c;
+
 	char m[h][w];
 
 	REP(i, 0, h){
 		REP(j, 0, w){
 			cin >> m[i][j];
+			if(m[i][j] == '#'){
+				l.push_back(i);
+				c.push_back(j);
+			}
 		}
 	}
 
-	for(int i=1; i<=w; i++){
-		m
+	sort(l.begin(), l.end());
+	sort(c.begin(), c.end());
+
+	int menorl = l[0], 
+	    maiorl = *(l.end() - 1), 
+	    menorc = c[0], 
+	    maiorc = *(c.end() - 1);
+
+	REP(i, menorl, maiorl+1){
+		REP(j, menorc, maiorc+1){
+			cout << m[i][j];
+		}
+		cout << bn;
 	}
 
 	return 0;
@@ -40,6 +57,6 @@ int main(){
 		
 	solve();		
 
-	cout << bn;
+	//cout << bn;
 	return 0;
 }
