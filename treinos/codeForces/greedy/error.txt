@@ -1,0 +1,38 @@
+/home/isaac/cppPersonal/treinos/codeForces/greedy/desorting.cpp: In function ‘ll solve()’:
+/home/isaac/cppPersonal/treinos/codeForces/greedy/desorting.cpp:33:34: error: no matching function for call to ‘min(ll&, int)’
+   33 |                         ans = min(ans, abs(as[i] - as[i-1]));
+      |                               ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/12/bits/specfun.h:45,
+                 from /usr/include/c++/12/cmath:1935,
+                 from /usr/include/x86_64-linux-gnu/c++/12/bits/stdc++.h:41,
+                 from /home/isaac/cppPersonal/treinos/codeForces/greedy/desorting.cpp:1:
+/usr/include/c++/12/bits/stl_algobase.h:230:5: note: candidate: ‘template<class _Tp> constexpr const _Tp& std::min(const _Tp&, const _Tp&)’
+  230 |     min(const _Tp& __a, const _Tp& __b)
+      |     ^~~
+/usr/include/c++/12/bits/stl_algobase.h:230:5: note:   template argument deduction/substitution failed:
+/home/isaac/cppPersonal/treinos/codeForces/greedy/desorting.cpp:33:34: note:   deduced conflicting types for parameter ‘const _Tp’ (‘long long int’ and ‘int’)
+   33 |                         ans = min(ans, abs(as[i] - as[i-1]));
+      |                               ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/12/bits/stl_algobase.h:278:5: note: candidate: ‘template<class _Tp, class _Compare> constexpr const _Tp& std::min(const _Tp&, const _Tp&, _Compare)’
+  278 |     min(const _Tp& __a, const _Tp& __b, _Compare __comp)
+      |     ^~~
+/usr/include/c++/12/bits/stl_algobase.h:278:5: note:   template argument deduction/substitution failed:
+/home/isaac/cppPersonal/treinos/codeForces/greedy/desorting.cpp:33:34: note:   deduced conflicting types for parameter ‘const _Tp’ (‘long long int’ and ‘int’)
+   33 |                         ans = min(ans, abs(as[i] - as[i-1]));
+      |                               ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/12/algorithm:61,
+                 from /usr/include/x86_64-linux-gnu/c++/12/bits/stdc++.h:65:
+/usr/include/c++/12/bits/stl_algo.h:5726:5: note: candidate: ‘template<class _Tp> constexpr _Tp std::min(initializer_list<_Tp>)’
+ 5726 |     min(initializer_list<_Tp> __l)
+      |     ^~~
+/usr/include/c++/12/bits/stl_algo.h:5726:5: note:   template argument deduction/substitution failed:
+/home/isaac/cppPersonal/treinos/codeForces/greedy/desorting.cpp:33:34: note:   mismatched types ‘std::initializer_list<_Tp>’ and ‘long long int’
+   33 |                         ans = min(ans, abs(as[i] - as[i-1]));
+      |                               ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/12/bits/stl_algo.h:5736:5: note: candidate: ‘template<class _Tp, class _Compare> constexpr _Tp std::min(initializer_list<_Tp>, _Compare)’
+ 5736 |     min(initializer_list<_Tp> __l, _Compare __comp)
+      |     ^~~
+/usr/include/c++/12/bits/stl_algo.h:5736:5: note:   template argument deduction/substitution failed:
+/home/isaac/cppPersonal/treinos/codeForces/greedy/desorting.cpp:33:34: note:   mismatched types ‘std::initializer_list<_Tp>’ and ‘long long int’
+   33 |                         ans = min(ans, abs(as[i] - as[i-1]));
+      |                               ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
