@@ -1,403 +1,72 @@
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp: In function ‘int solve()’:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:30: error: no match for ‘operator>>’ (operand types are ‘std::ostream’ {aka ‘std::basic_ostream<char>’} and ‘int’)
-   28 |                         cout >> m[i][j] >> " ";
-      |                         ~~~~ ^~ ~~~~~~~
-      |                         |             |
-      |                         |             int
-      |                         std::ostream {aka std::basic_ostream<char>}
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:30: note: candidate: ‘operator>>(int, int)’ (built-in)
-   28 |                         cout >> m[i][j] >> " ";
-      |                         ~~~~~^~~~~~~~~~
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:30: note:   no known conversion for argument 1 from ‘std::ostream’ {aka ‘std::basic_ostream<char>’} to ‘int’
-In file included from /usr/include/x86_64-linux-gnu/c++/12/bits/stdc++.h:45,
-                 from /home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:1:
-/usr/include/c++/12/cstddef:130:5: note: candidate: ‘template<class _IntegerType> constexpr std::__byte_op_t<_IntegerType> std::operator>>(byte, _IntegerType)’
-  130 |     operator>>(byte __b, _IntegerType __shift) noexcept
-      |     ^~~~~~~~
-/usr/include/c++/12/cstddef:130:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:25: note:   cannot convert ‘std::cout’ (type ‘std::ostream’ {aka ‘std::basic_ostream<char>’}) to type ‘std::byte’
-   28 |                         cout >> m[i][j] >> " ";
-      |                         ^~~~
-In file included from /usr/include/c++/12/string:54,
-                 from /usr/include/c++/12/bits/locale_classes.h:40,
-                 from /usr/include/c++/12/bits/ios_base.h:41,
-                 from /usr/include/c++/12/ios:42,
-                 from /usr/include/c++/12/istream:38,
-                 from /usr/include/c++/12/sstream:38,
-                 from /usr/include/c++/12/complex:45,
-                 from /usr/include/c++/12/ccomplex:39,
-                 from /usr/include/x86_64-linux-gnu/c++/12/bits/stdc++.h:54:
-/usr/include/c++/12/bits/basic_string.tcc:940:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, __cxx11::basic_string<_CharT, _Traits, _Allocator>&)’
-  940 |     operator>>(basic_istream<_CharT, _Traits>& __in,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/basic_string.tcc:940:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-In file included from /usr/include/c++/12/istream:1016:
-/usr/include/c++/12/bits/istream.tcc:975:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, _CharT&)’
-  975 |     operator>>(basic_istream<_CharT, _Traits>& __in, _CharT& __c)
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/istream.tcc:975:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/istream:756:5: note: candidate: ‘template<class _Traits> std::basic_istream<char, _Traits>& std::operator>>(basic_istream<char, _Traits>&, unsigned char&)’
-  756 |     operator>>(basic_istream<char, _Traits>& __in, unsigned char& __c)
-      |     ^~~~~~~~
-/usr/include/c++/12/istream:756:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<char, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/istream:761:5: note: candidate: ‘template<class _Traits> std::basic_istream<char, _Traits>& std::operator>>(basic_istream<char, _Traits>&, signed char&)’
-  761 |     operator>>(basic_istream<char, _Traits>& __in, signed char& __c)
-      |     ^~~~~~~~
-/usr/include/c++/12/istream:761:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<char, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/istream:859:5: note: candidate: ‘template<class _CharT, class _Traits, long unsigned int _Num> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, _CharT (&)[_Num])’
-  859 |     operator>>(basic_istream<_CharT, _Traits>& __in, _CharT (&__s)[_Num])
-      |     ^~~~~~~~
-/usr/include/c++/12/istream:859:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/istream:868:5: note: candidate: ‘template<class _Traits, long unsigned int _Num> std::basic_istream<char, _Traits>& std::operator>>(basic_istream<char, _Traits>&, unsigned char (&)[_Num])’
-  868 |     operator>>(basic_istream<char, _Traits>& __in, unsigned char (&__s)[_Num])
-      |     ^~~~~~~~
-/usr/include/c++/12/istream:868:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<char, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/istream:873:5: note: candidate: ‘template<class _Traits, long unsigned int _Num> std::basic_istream<char, _Traits>& std::operator>>(basic_istream<char, _Traits>&, signed char (&)[_Num])’
-  873 |     operator>>(basic_istream<char, _Traits>& __in, signed char (&__s)[_Num])
-      |     ^~~~~~~~
-/usr/include/c++/12/istream:873:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<char, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/istream:1006:5: note: candidate: ‘template<class _Istream, class _Tp> _Istream&& std::operator>>(_Istream&&, _Tp&&)’
- 1006 |     operator>>(_Istream&& __is, _Tp&& __x)
-      |     ^~~~~~~~
-/usr/include/c++/12/istream:1006:5: note:   template argument deduction/substitution failed:
-/usr/include/c++/12/istream: In substitution of ‘template<class _Istream, class _Tp> _Istream&& std::operator>>(_Istream&&, _Tp&&) [with _Istream = std::basic_ostream<char>&; _Tp = int&]’:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:18:   required from here
-/usr/include/c++/12/istream:1006:5: error: template constraint failure for ‘template<class _Is, class _Tp>  requires (__derived_from_ios_base<_Is>) && requires(_Is& __is, _Tp&& __t) {__is >> (forward<_Tp>)(__t);} using __rvalue_stream_extraction_t = _Is&&’
-/usr/include/c++/12/istream:1006:5: note: constraints not satisfied
-In file included from /usr/include/c++/12/istream:39:
-/usr/include/c++/12/ostream: In substitution of ‘template<class _Is, class _Tp>  requires (__derived_from_ios_base<_Is>) && requires(_Is& __is, _Tp&& __t) {__is >> (forward<_Tp>)(__t);} using __rvalue_stream_extraction_t = _Is&& [with _Is = std::basic_ostream<char>&; _Tp = int&]’:
-/usr/include/c++/12/istream:1006:5:   required by substitution of ‘template<class _Istream, class _Tp> _Istream&& std::operator>>(_Istream&&, _Tp&&) [with _Istream = std::basic_ostream<char>&; _Tp = int&]’
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:18:   required from here
-/usr/include/c++/12/ostream:721:13:   required for the satisfaction of ‘__derived_from_ios_base<_Is>’ [with _Is = std::basic_ostream<char, std::char_traits<char> >&]
-/usr/include/c++/12/ostream:721:39: note: the expression ‘is_class_v<_Tp> [with _Tp = std::basic_ostream<char, std::char_traits<char> >&]’ evaluated to ‘false’
-  721 |     concept __derived_from_ios_base = is_class_v<_Tp>
-      |                                       ^~~~~~~~~~~~~~~
-/usr/include/c++/12/complex:501:5: note: candidate: ‘template<class _Tp, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, complex<_Tp>&)’
-  501 |     operator>>(basic_istream<_CharT, _Traits>& __is, complex<_Tp>& __x)
-      |     ^~~~~~~~
-/usr/include/c++/12/complex:501:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-In file included from /usr/include/x86_64-linux-gnu/c++/12/bits/stdc++.h:66:
-/usr/include/c++/12/bitset:1475:5: note: candidate: ‘template<class _CharT, class _Traits, long unsigned int _Nb> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, bitset<_Nb>&)’
- 1475 |     operator>>(std::basic_istream<_CharT, _Traits>& __is, bitset<_Nb>& __x)
-      |     ^~~~~~~~
-/usr/include/c++/12/bitset:1475:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-In file included from /usr/include/x86_64-linux-gnu/c++/12/bits/stdc++.h:72:
-/usr/include/c++/12/iomanip:71:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, _Resetiosflags)’
-   71 |     operator>>(basic_istream<_CharT, _Traits>& __is, _Resetiosflags __f)
-      |     ^~~~~~~~
-/usr/include/c++/12/iomanip:71:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/iomanip:101:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, _Setiosflags)’
-  101 |     operator>>(basic_istream<_CharT, _Traits>& __is, _Setiosflags __f)
-      |     ^~~~~~~~
-/usr/include/c++/12/iomanip:101:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/iomanip:132:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, _Setbase)’
-  132 |     operator>>(basic_istream<_CharT, _Traits>& __is, _Setbase __f)
-      |     ^~~~~~~~
-/usr/include/c++/12/iomanip:132:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/iomanip:170:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, _Setfill<_CharT>)’
-  170 |     operator>>(basic_istream<_CharT, _Traits>& __is, _Setfill<_CharT> __f)
-      |     ^~~~~~~~
-/usr/include/c++/12/iomanip:170:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/iomanip:200:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, _Setprecision)’
-  200 |     operator>>(basic_istream<_CharT, _Traits>& __is, _Setprecision __f)
-      |     ^~~~~~~~
-/usr/include/c++/12/iomanip:200:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/iomanip:230:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, _Setw)’
-  230 |     operator>>(basic_istream<_CharT, _Traits>& __is, _Setw __f)
-      |     ^~~~~~~~
-/usr/include/c++/12/iomanip:230:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/iomanip:264:5: note: candidate: ‘template<class _CharT, class _Traits, class _MoneyT> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, _Get_money<_MoneyT>)’
-  264 |     operator>>(basic_istream<_CharT, _Traits>& __is, _Get_money<_MoneyT> __f)
-      |     ^~~~~~~~
-/usr/include/c++/12/iomanip:264:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/iomanip:418:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, _Get_time<_CharT>)’
-  418 |     operator>>(basic_istream<_CharT, _Traits>& __is, _Get_time<_CharT> __f)
-      |     ^~~~~~~~
-/usr/include/c++/12/iomanip:418:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-In file included from /usr/include/c++/12/valarray:603,
-                 from /usr/include/x86_64-linux-gnu/c++/12/bits/stdc++.h:95:
-/usr/include/c++/12/bits/valarray_after.h:414:5: note: candidate: ‘template<class _Dom1, class _Dom2> std::_Expr<std::__detail::_BinClos<std::__shift_right, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__shift_right, typename _Dom1::value_type>::result_type> std::operator>>(const _Expr<_Dom1, typename _Dom1::value_type>&, const _Expr<_Dom2, typename _Dom2::value_type>&)’
-  414 |     _DEFINE_EXPR_BINARY_OPERATOR(>>, struct std::__shift_right)
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/include/c++/12/bits/valarray_after.h:414:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/valarray_after.h:414:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__shift_right, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__shift_right, typename _Dom1::value_type>::result_type> std::operator>>(const _Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)’
-  414 |     _DEFINE_EXPR_BINARY_OPERATOR(>>, struct std::__shift_right)
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/include/c++/12/bits/valarray_after.h:414:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/valarray_after.h:414:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__shift_right, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__shift_right, typename _Dom1::value_type>::result_type> std::operator>>(const typename _Dom::value_type&, const _Expr<_Dom1, typename _Dom1::value_type>&)’
-  414 |     _DEFINE_EXPR_BINARY_OPERATOR(>>, struct std::__shift_right)
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/include/c++/12/bits/valarray_after.h:414:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   mismatched types ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’ and ‘int’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/valarray_after.h:414:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__shift_right, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__shift_right, typename _Dom1::value_type>::result_type> std::operator>>(const _Expr<_Dom1, typename _Dom1::value_type>&, const valarray<typename _Dom::value_type>&)’
-  414 |     _DEFINE_EXPR_BINARY_OPERATOR(>>, struct std::__shift_right)
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/include/c++/12/bits/valarray_after.h:414:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/valarray_after.h:414:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__shift_right, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__shift_right, typename _Dom1::value_type>::result_type> std::operator>>(const valarray<typename _Dom::value_type>&, const _Expr<_Dom1, typename _Dom1::value_type>&)’
-  414 |     _DEFINE_EXPR_BINARY_OPERATOR(>>, struct std::__shift_right)
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/include/c++/12/bits/valarray_after.h:414:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   mismatched types ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’ and ‘int’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/valarray:1195:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__shift_right, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__shift_right, _Tp>::result_type> std::operator>>(const valarray<_Tp>&, const valarray<_Tp>&)’
- 1195 | _DEFINE_BINARY_OPERATOR(>>, __shift_right)
-      | ^~~~~~~~~~~~~~~~~~~~~~~
-/usr/include/c++/12/valarray:1195:1: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::valarray<_Tp>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/valarray:1195:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__shift_right, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__shift_right, _Tp>::result_type> std::operator>>(const valarray<_Tp>&, const typename valarray<_Tp>::value_type&)’
- 1195 | _DEFINE_BINARY_OPERATOR(>>, __shift_right)
-      | ^~~~~~~~~~~~~~~~~~~~~~~
-/usr/include/c++/12/valarray:1195:1: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘const std::valarray<_Tp>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/valarray:1195:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__shift_right, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__shift_right, _Tp>::result_type> std::operator>>(const typename valarray<_Tp>::value_type&, const valarray<_Tp>&)’
- 1195 | _DEFINE_BINARY_OPERATOR(>>, __shift_right)
-      | ^~~~~~~~~~~~~~~~~~~~~~~
-/usr/include/c++/12/valarray:1195:1: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   mismatched types ‘const std::valarray<_Tp>’ and ‘int’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-In file included from /usr/include/c++/12/random:51,
-                 from /usr/include/x86_64-linux-gnu/c++/12/bits/stdc++.h:108:
-/usr/include/c++/12/bits/random.tcc:927:5: note: candidate: ‘template<class _IntType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, uniform_int_distribution<_IntType>&)’
-  927 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:927:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:988:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, uniform_real_distribution<_IntType>&)’
-  988 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:988:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:2173:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, cauchy_distribution<_RealType>&)’
- 2173 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:2173:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-In file included from /usr/include/c++/12/random:49:
-/usr/include/c++/12/bits/random.h:3725:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, bernoulli_distribution&)’
- 3725 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.h:3725:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:1130:5: note: candidate: ‘template<class _IntType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, geometric_distribution<_IntType>&)’
- 1130 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:1130:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:1781:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, exponential_distribution<_RealType>&)’
- 1781 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:1781:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:2567:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, weibull_distribution<_RealType>&)’
- 2567 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:2567:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:2641:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, extreme_value_distribution<_RealType>&)’
- 2641 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:2641:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:177:5: note: candidate: ‘template<class _UIntType, _UIntType __a, _UIntType __c, _UIntType __m, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, linear_congruential_engine<_UIntType, __a, __c, __m>&)’
-  177 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:177:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:504:5: note: candidate: ‘template<class _UIntType1, long unsigned int __w1, long unsigned int __n1, long unsigned int __m1, long unsigned int __r1, _UIntType1 __a1, long unsigned int __u1, _UIntType1 __d1, long unsigned int __s1, _UIntType1 __b1, long unsigned int __t1, _UIntType1 __c1, long unsigned int __l1, _UIntType1 __f1, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>&)’
-  504 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:504:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:656:5: note: candidate: ‘template<class _UIntType, long unsigned int __w, long unsigned int __s, long unsigned int __r, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, subtract_with_carry_engine<_UIntType, __w, __s, __r>&)’
-  656 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:656:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:723:5: note: candidate: ‘template<class _RandomNumberEngine, long unsigned int __p, long unsigned int __r, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, discard_block_engine<_RandomNumberEngine, __p, __r>&)’
-  723 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:723:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:887:5: note: candidate: ‘template<class _RandomNumberEngine, long unsigned int __k, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, shuffle_order_engine<_RandomNumberEngine, __k>&)’
-  887 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:887:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:1245:5: note: candidate: ‘template<class _IntType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, negative_binomial_distribution<_IntType>&)’
- 1245 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:1245:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:1455:5: note: candidate: ‘template<class _IntType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, poisson_distribution<_IntType>&)’
- 1455 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:1455:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:1722:5: note: candidate: ‘template<class _IntType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, binomial_distribution<_IntType>&)’
- 1722 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:1722:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:1951:5: note: candidate: ‘template<class _RealType1, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, normal_distribution<_RealType>&)’
- 1951 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:1951:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:2016:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, lognormal_distribution<_RealType>&)’
- 2016 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:2016:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:2087:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, chi_squared_distribution<_RealType>&)’
- 2087 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:2087:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:2249:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, fisher_f_distribution<_RealType>&)’
- 2249 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:2249:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:2322:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, student_t_distribution<_RealType>&)’
- 2322 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:2322:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:2492:5: note: candidate: ‘template<class _RealType1, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, gamma_distribution<_RealType>&)’
- 2492 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:2492:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:2800:5: note: candidate: ‘template<class _IntType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, discrete_distribution<_IntType>&)’
- 2800 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:2800:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:3007:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, piecewise_constant_distribution<_RealType>&)’
- 3007 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:3007:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
-/usr/include/c++/12/bits/random.tcc:3213:5: note: candidate: ‘template<class _RealType, class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, piecewise_linear_distribution<_RealType>&)’
- 3213 |     operator>>(std::basic_istream<_CharT, _Traits>& __is,
-      |     ^~~~~~~~
-/usr/include/c++/12/bits/random.tcc:3213:5: note:   template argument deduction/substitution failed:
-/home/isaac/cppPersonal/allContests/ip100/lista1/b.cpp:28:39: note:   ‘std::ostream’ {aka ‘std::basic_ostream<char>’} is not derived from ‘std::basic_istream<_CharT, _Traits>’
-   28 |                         cout >> m[i][j] >> " ";
-      |                                       ^
+/home/isaac/cppPersonal/allContests/ip100/lista1/e.cpp: In function ‘int solve()’:
+/home/isaac/cppPersonal/allContests/ip100/lista1/e.cpp:60:34: error: no matching function for call to ‘std::map<int, int>::insert(int&)’
+   60 |                         ns.insert(i);
+      |                         ~~~~~~~~~^~~
+In file included from /usr/include/c++/12/map:61,
+                 from /usr/include/x86_64-linux-gnu/c++/12/bits/stdc++.h:81,
+                 from /home/isaac/cppPersonal/allContests/ip100/lista1/e.cpp:1:
+/usr/include/c++/12/bits/stl_map.h:846:9: note: candidate: ‘template<class _Pair> std::__enable_if_t<std::is_constructible<std::pair<const _Key, _Val>, _Pair>::value, std::pair<typename std::_Rb_tree<_Key, std::pair<const _Key, _Val>, std::_Select1st<std::pair<const _Key, _Val> >, _Compare, typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Val> >::other>::iterator, bool> > std::map<_Key, _Tp, _Compare, _Alloc>::insert(_Pair&&) [with _Key = int; _Tp = int; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, int> >]’
+  846 |         insert(_Pair&& __x)
+      |         ^~~~~~
+/usr/include/c++/12/bits/stl_map.h:846:9: note:   template argument deduction/substitution failed:
+In file included from /usr/include/c++/12/bits/stl_pair.h:60,
+                 from /usr/include/c++/12/bits/stl_algobase.h:64,
+                 from /usr/include/c++/12/bits/specfun.h:45,
+                 from /usr/include/c++/12/cmath:1935,
+                 from /usr/include/x86_64-linux-gnu/c++/12/bits/stdc++.h:41:
+/usr/include/c++/12/type_traits: In substitution of ‘template<bool _Cond, class _Tp> using __enable_if_t = typename std::enable_if::type [with bool _Cond = false; _Tp = std::pair<std::_Rb_tree_iterator<std::pair<const int, int> >, bool>]’:
+/usr/include/c++/12/bits/stl_map.h:846:2:   required by substitution of ‘template<class _Pair> std::__enable_if_t<std::is_constructible<std::pair<const int, int>, _Pair>::value, std::pair<std::_Rb_tree_iterator<std::pair<const int, int> >, bool> > std::map<int, int>::insert(_Pair&&) [with _Pair = int&]’
+/home/isaac/cppPersonal/allContests/ip100/lista1/e.cpp:60:13:   required from here
+/usr/include/c++/12/type_traits:2234:11: error: no type named ‘type’ in ‘struct std::enable_if<false, std::pair<std::_Rb_tree_iterator<std::pair<const int, int> >, bool> >’
+ 2234 |     using __enable_if_t = typename enable_if<_Cond, _Tp>::type;
+      |           ^~~~~~~~~~~~~
+/usr/include/c++/12/bits/stl_map.h:923:9: note: candidate: ‘template<class _Pair> std::__enable_if_t<std::is_constructible<std::pair<const _Key, _Val>, _Pair>::value, typename std::_Rb_tree<_Key, std::pair<const _Key, _Val>, std::_Select1st<std::pair<const _Key, _Val> >, _Compare, typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Val> >::other>::iterator> std::map<_Key, _Tp, _Compare, _Alloc>::insert(const_iterator, _Pair&&) [with _Key = int; _Tp = int; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, int> >]’
+  923 |         insert(const_iterator __position, _Pair&& __x)
+      |         ^~~~~~
+/usr/include/c++/12/bits/stl_map.h:923:9: note:   template argument deduction/substitution failed:
+/home/isaac/cppPersonal/allContests/ip100/lista1/e.cpp:60:34: note:   candidate expects 2 arguments, 1 provided
+   60 |                         ns.insert(i);
+      |                         ~~~~~~~~~^~~
+/usr/include/c++/12/bits/stl_map.h:941:9: note: candidate: ‘template<class _InputIterator> void std::map<_Key, _Tp, _Compare, _Alloc>::insert(_InputIterator, _InputIterator) [with _Key = int; _Tp = int; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, int> >]’
+  941 |         insert(_InputIterator __first, _InputIterator __last)
+      |         ^~~~~~
+/usr/include/c++/12/bits/stl_map.h:941:9: note:   template argument deduction/substitution failed:
+/home/isaac/cppPersonal/allContests/ip100/lista1/e.cpp:60:34: note:   candidate expects 2 arguments, 1 provided
+   60 |                         ns.insert(i);
+      |                         ~~~~~~~~~^~~
+/usr/include/c++/12/bits/stl_map.h:659:7: note: candidate: ‘std::map<_Key, _Tp, _Compare, _Alloc>::insert_return_type std::map<_Key, _Tp, _Compare, _Alloc>::insert(node_type&&) [with _Key = int; _Tp = int; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, int> >; insert_return_type = std::_Rb_tree<int, std::pair<const int, int>, std::_Select1st<std::pair<const int, int> >, std::less<int>, std::allocator<std::pair<const int, int> > >::insert_return_type; node_type = std::_Rb_tree<int, std::pair<const int, int>, std::_Select1st<std::pair<const int, int> >, std::less<int>, std::allocator<std::pair<const int, int> > >::node_type]’
+  659 |       insert(node_type&& __nh)
+      |       ^~~~~~
+/usr/include/c++/12/bits/stl_map.h:659:26: note:   no known conversion for argument 1 from ‘int’ to ‘std::map<int, int>::node_type&&’ {aka ‘std::_Rb_tree<int, std::pair<const int, int>, std::_Select1st<std::pair<const int, int> >, std::less<int>, std::allocator<std::pair<const int, int> > >::node_type&&’}
+  659 |       insert(node_type&& __nh)
+      |              ~~~~~~~~~~~~^~~~
+/usr/include/c++/12/bits/stl_map.h:664:7: note: candidate: ‘std::map<_Key, _Tp, _Compare, _Alloc>::iterator std::map<_Key, _Tp, _Compare, _Alloc>::insert(const_iterator, node_type&&) [with _Key = int; _Tp = int; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, int> >; iterator = std::_Rb_tree<int, std::pair<const int, int>, std::_Select1st<std::pair<const int, int> >, std::less<int>, std::allocator<std::pair<const int, int> > >::iterator; const_iterator = std::_Rb_tree<int, std::pair<const int, int>, std::_Select1st<std::pair<const int, int> >, std::less<int>, std::allocator<std::pair<const int, int> > >::const_iterator; node_type = std::_Rb_tree<int, std::pair<const int, int>, std::_Select1st<std::pair<const int, int> >, std::less<int>, std::allocator<std::pair<const int, int> > >::node_type]’
+  664 |       insert(const_iterator __hint, node_type&& __nh)
+      |       ^~~~~~
+/usr/include/c++/12/bits/stl_map.h:664:7: note:   candidate expects 2 arguments, 1 provided
+/usr/include/c++/12/bits/stl_map.h:833:7: note: candidate: ‘std::pair<typename std::_Rb_tree<_Key, std::pair<const _Key, _Val>, std::_Select1st<std::pair<const _Key, _Val> >, _Compare, typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Val> >::other>::iterator, bool> std::map<_Key, _Tp, _Compare, _Alloc>::insert(const value_type&) [with _Key = int; _Tp = int; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, int> >; typename std::_Rb_tree<_Key, std::pair<const _Key, _Val>, std::_Select1st<std::pair<const _Key, _Val> >, _Compare, typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Val> >::other>::iterator = std::_Rb_tree<int, std::pair<const int, int>, std::_Select1st<std::pair<const int, int> >, std::less<int>, std::allocator<std::pair<const int, int> > >::iterator; typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Val> >::other = std::allocator<std::pair<const int, int> >; typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Val> > = __gnu_cxx::__alloc_traits<std::allocator<std::pair<const int, int> >, std::pair<const int, int> >::rebind<std::pair<const int, int> >; typename _Allocator::value_type = std::pair<const int, int>; value_type = std::pair<const int, int>]’
+  833 |       insert(const value_type& __x)
+      |       ^~~~~~
+/usr/include/c++/12/bits/stl_map.h:833:32: note:   no known conversion for argument 1 from ‘int’ to ‘const std::map<int, int>::value_type&’ {aka ‘const std::pair<const int, int>&’}
+  833 |       insert(const value_type& __x)
+      |              ~~~~~~~~~~~~~~~~~~^~~
+/usr/include/c++/12/bits/stl_map.h:840:7: note: candidate: ‘std::pair<typename std::_Rb_tree<_Key, std::pair<const _Key, _Val>, std::_Select1st<std::pair<const _Key, _Val> >, _Compare, typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Val> >::other>::iterator, bool> std::map<_Key, _Tp, _Compare, _Alloc>::insert(value_type&&) [with _Key = int; _Tp = int; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, int> >; typename std::_Rb_tree<_Key, std::pair<const _Key, _Val>, std::_Select1st<std::pair<const _Key, _Val> >, _Compare, typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Val> >::other>::iterator = std::_Rb_tree<int, std::pair<const int, int>, std::_Select1st<std::pair<const int, int> >, std::less<int>, std::allocator<std::pair<const int, int> > >::iterator; typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Val> >::other = std::allocator<std::pair<const int, int> >; typename __gnu_cxx::__alloc_traits<_Allocator>::rebind<std::pair<const _Key, _Val> > = __gnu_cxx::__alloc_traits<std::allocator<std::pair<const int, int> >, std::pair<const int, int> >::rebind<std::pair<const int, int> >; typename _Allocator::value_type = std::pair<const int, int>; value_type = std::pair<const int, int>]’
+  840 |       insert(value_type&& __x)
+      |       ^~~~~~
+/usr/include/c++/12/bits/stl_map.h:840:27: note:   no known conversion for argument 1 from ‘int’ to ‘std::map<int, int>::value_type&&’ {aka ‘std::pair<const int, int>&&’}
+  840 |       insert(value_type&& __x)
+      |              ~~~~~~~~~~~~~^~~
+/usr/include/c++/12/bits/stl_map.h:878:7: note: candidate: ‘void std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::initializer_list<std::pair<const _Key, _Val> >) [with _Key = int; _Tp = int; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, int> >]’
+  878 |       insert(std::initializer_list<value_type> __list)
+      |       ^~~~~~
+/usr/include/c++/12/bits/stl_map.h:878:48: note:   no known conversion for argument 1 from ‘int’ to ‘std::initializer_list<std::pair<const int, int> >’
+  878 |       insert(std::initializer_list<value_type> __list)
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/usr/include/c++/12/bits/stl_map.h:908:7: note: candidate: ‘std::map<_Key, _Tp, _Compare, _Alloc>::iterator std::map<_Key, _Tp, _Compare, _Alloc>::insert(const_iterator, const value_type&) [with _Key = int; _Tp = int; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, int> >; iterator = std::_Rb_tree<int, std::pair<const int, int>, std::_Select1st<std::pair<const int, int> >, std::less<int>, std::allocator<std::pair<const int, int> > >::iterator; const_iterator = std::_Rb_tree<int, std::pair<const int, int>, std::_Select1st<std::pair<const int, int> >, std::less<int>, std::allocator<std::pair<const int, int> > >::const_iterator; value_type = std::pair<const int, int>]’
+  908 |       insert(const_iterator __position, const value_type& __x)
+      |       ^~~~~~
+/usr/include/c++/12/bits/stl_map.h:908:7: note:   candidate expects 2 arguments, 1 provided
+/usr/include/c++/12/bits/stl_map.h:918:7: note: candidate: ‘std::map<_Key, _Tp, _Compare, _Alloc>::iterator std::map<_Key, _Tp, _Compare, _Alloc>::insert(const_iterator, value_type&&) [with _Key = int; _Tp = int; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, int> >; iterator = std::_Rb_tree<int, std::pair<const int, int>, std::_Select1st<std::pair<const int, int> >, std::less<int>, std::allocator<std::pair<const int, int> > >::iterator; const_iterator = std::_Rb_tree<int, std::pair<const int, int>, std::_Select1st<std::pair<const int, int> >, std::less<int>, std::allocator<std::pair<const int, int> > >::const_iterator; value_type = std::pair<const int, int>]’
+  918 |       insert(const_iterator __position, value_type&& __x)
+      |       ^~~~~~
+/usr/include/c++/12/bits/stl_map.h:918:7: note:   candidate expects 2 arguments, 1 provided
