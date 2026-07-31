@@ -5,8 +5,7 @@
 using namespace std;
 
 vector<int> bfs(const vector<vector<int>> &g, int s){
-	size_t n = g.size();
-	vector<int> dist(n, -1);
+	vector<int> dist(g.size(), -1);
 
 	queue<int> q;
 	q.push(s);
