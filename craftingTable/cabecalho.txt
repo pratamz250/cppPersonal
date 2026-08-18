@@ -26,7 +26,6 @@ fastIO;
 	
 
 cout << bn;
-return 0;
 }
 
 int solve(){
