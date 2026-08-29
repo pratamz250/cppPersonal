@@ -11,6 +11,7 @@ using vll = vector<ll>;
 using vf = vector<float>;
 using vd = vector<double>;
 using vc = vector<char>;
+using vb = vector<bool>;
 using vvi = vector<vector<int>>;
 using vvc = vector<vector<char>>;
 using qi = queue<int>;
