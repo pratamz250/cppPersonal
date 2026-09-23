@@ -20,56 +20,39 @@ constexpr ll PRIME { 1'000'000'007 };
 constexpr double PI { acos(-1.0) };
 
 int solve();
-void dfs(int s, ll l, int n, const vi &as, int countDist, int countV);
-
-//vvi g;
 vb visited;
 
 int main(){
 	fastIO;
 		
-	solve();
+	solve();		
 
 	cout << bn;
 }
 
 int solve(){
-	//const int MAX = 8010;
-	int n, s, countDist=0, countV=0;
-	ll l;
+	int n, s;
+	ll l, countD=0;
 
 	cin >> n >> s >> l;
 
-	visited.resize(n+1, false);
+	visited.resize(n, false);
 
 	vi as(n);
 	REP(i, 0, n)
 		cin >> as[i];
 
-	dfs(s, l, n, as, countDist, countV);
+	while(1){
+		int v1 = s - 1;
+		int v2 = s + 1;
+
+		if(v1 >= 0 and as[v1-1] < as[v2] and visited[v1] == false){
+			countD += as[v1];	
+			visited[v1] = true;
+			s = v1;
+		}
+	}	
 
 	return 0;
 }
 
-void dfs(int s, ll l, int n, const vi &as, int countDist, int countV){
-	visited[s] = true;	
-
-	if(countDist == l and as[s-1] == true and as[s+1] == true)
-		return countV;
-
-	int v1 = s - 1;
-	if(v1 >= 1 and visited[v1] == false){
-		countV++;
-		countDist += as[v1-1];
-		dfs(v1);
-	}
-	
-	int v2 = s + 1;
-	if(v2 <= n and visited[v2] == false){
-		countV++;
-		countDist += as[v2];
-		dfs(v2);
-	}
-	
-	return -1;
-}
