@@ -1,0 +1,2 @@
+double free or corruption (out)
+/home/isaac/.local/bin/compile.sh: line 167: 20852 Aborted                 (core dumped) "$OUT"
