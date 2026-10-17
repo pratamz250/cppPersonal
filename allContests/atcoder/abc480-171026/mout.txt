@@ -1,0 +1,99 @@
+takahashi aoki sato kato kano 
+
+aoki takanashi sano atcoder chokudai kato aoki yato 
+
+@aoki sato
+@a s
+@o a
+@k t
+@i o
+4
+@aoki kato
+@a k
+@o a
+@k t
+@i o
+4
+@aoki kano
+@a k
+@o a
+@k n
+@i o
+4
+@takanashi takahashi
+@n h
+1
+takahashi
+@sano aoki
+@s a
+@a o
+@n k
+@o i
+4
+@sano sato
+@n t
+1
+sato
+@sano kato
+@s k
+@n t
+2
+@sano kano
+@s k
+1
+kano
+@kato aoki
+@k a
+@a o
+@t k
+@o i
+4
+@kato sato
+@k s
+1
+sato
+@kato kano
+@t n
+1
+kano
+@aoki sato
+@a s
+@o a
+@k t
+@i o
+4
+@aoki kato
+@a k
+@o a
+@k t
+@i o
+4
+@aoki kano
+@a k
+@o a
+@k n
+@i o
+4
+@yato aoki
+@y a
+@a o
+@t k
+@o i
+4
+@yato sato
+@y s
+1
+sato
+@yato kato
+@y k
+1
+kato
+@yato kano
+@y k
+@t n
+2
+1
+2
+3
+2
+2
