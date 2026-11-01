@@ -12,6 +12,7 @@ using vf = vector<float>;
 using vd = vector<double>;
 using vc = vector<char>;
 using vb = vector<bool>;
+using vs = vector<string>;
 using vvi = vector<vector<int>>;
 using vvc = vector<vector<char>>;
 using qi = queue<int>;
@@ -20,16 +21,24 @@ constexpr ll PRIME { 1'000'000'007 };
 constexpr double PI { acos(-1.0) };
 
 int solve();
+void tosee(const vi &v);
 
 int main(){
-fastIO;
+	fastIO;
 	
 	
 
-cout << bn;
+	cout << bn;
 }
 
 int solve(){
 
-return 0;
+	return 0;
+}
+
+void tosee(const vi &v){
+	for(auto e : v)	
+		cout << e << " ";
+
+	cout << bn;
 }
