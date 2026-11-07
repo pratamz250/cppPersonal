@@ -1,0 +1,4 @@
+/home/isaac/cppPersonal/allContests/codeForces/r1131-div3-311026/a.cpp: In function ‘int solve()’:
+/home/isaac/cppPersonal/allContests/codeForces/r1131-div3-311026/a.cpp:58:35: error: base operand of ‘->’ has non-pointer type ‘std::map<char, int>’
+   58 |                                 h1->second = 0;
+      |                                   ^~
