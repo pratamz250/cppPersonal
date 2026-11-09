@@ -1,22 +1,34 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
+using vi = vector<int>;
+
+vi prefixSum(const vi &v);
 
 int main(){
-	vector<int> a = {3, 1, 4, 1, 5};
-	vector<int> pref(a.size() + 1);
+	vi v(100);
+	iota(v.begin(), v.end(), 1);
 
-	for(size_t i=0; i<a.size(); i++){
-		pref[i+1] = pref[i] + a[i];
-	}
+	vi prefs = prefixSum(v);
 
-	for(auto e : pref)
+	for(auto e : prefs)
 		cout << e << " ";
-
-	int sum = abs(pref[2] - pref[5]); //soma de 2 a 3
-	cout << endl << sum;
-	
 	cout << endl;
-	return 0;
+
+	cout << "Impares entre INDICES 9 e 45: " << prefs[45 + 1] - prefs[9] << " (corresponde a [10, 46]" << endl;
+	cout << "Impares entre os NUMEROS 9 e 45: " << prefs[44 + 1] - prefs[8] << endl;
+	cout << "Impares entre os numeros 1 e 10: " << prefs[9] - prefs[0] << endl;
+
+	cout << endl;
+	return 0;	
 }
+
+vi prefixSum(const vi &v){
+	vi pref(v.size()+1, 0);
+
+	for(size_t i=0; i<v.size(); i++)
+		pref[i+1] = pref[i] + (v[i] & 1);
+
+	return pref;
+}
+
