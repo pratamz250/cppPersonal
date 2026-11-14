@@ -18,6 +18,15 @@
 #   -t INDEX        Create only tINDEX.cpp from the configured template
 #   -c NAME         Create NAME.cpp from the configured template
 #   -h, --help      Show this help
+#
+# How to use:
+#   1. Set TEMPLATE_DIR below to the directory containing your template file.
+#   2. chmod +x oncp.sh
+#   3. mkdir -p ~/.local/bin
+#   4. mv oncp.sh ~/.local/bin/oncp.sh
+#   5. source ~/.profile
+#   6. Run oncp.sh, oncp.sh --dir /path/to/template, oncp.sh -n 3,
+#      or oncp.sh --t binary_search
 ###############################################################################
 
 set -Eeuo pipefail
