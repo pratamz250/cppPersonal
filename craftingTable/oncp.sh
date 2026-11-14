@@ -15,17 +15,9 @@
 # Options:
 #   --dir PATH      Use PATH as the template directory for this invocation
 #   -n COUNT        Create COUNT source files (a.cpp, b.cpp, c.cpp, ...)
-#   --t INDEX       Create only tINDEX.cpp from the configured template
+#   -t INDEX        Create only tINDEX.cpp from the configured template
+#   -c NAME         Create NAME.cpp from the configured template
 #   -h, --help      Show this help
-#
-# How to use:
-#   1. Set TEMPLATE_DIR below to the directory containing your template file.
-#   2. chmod +x oncp.sh
-#   3. mkdir -p ~/.local/bin
-#   4. mv oncp.sh ~/.local/bin/oncp.sh
-#   5. source ~/.profile
-#   6. Run oncp.sh, oncp.sh --dir /path/to/template, oncp.sh -n 3,
-#      or oncp.sh --t binary_search
 ###############################################################################
 
 set -Eeuo pipefail
@@ -41,34 +33,36 @@ TEMPLATE_FILE="cabecalho.txt"
 usage() {
     cat <<'EOF'
 Usage:
-  oncp                 Create a.cpp and empty in.txt, out.txt, mout.txt
-  oncp --dir PATH      Use PATH as the template directory for this invocation
-  oncp -n COUNT        Create COUNT source files: a.cpp, b.cpp, c.cpp, ...
-  oncp --t INDEX       Create only tINDEX.cpp
-  oncp -h, --help      Show this help
+  $ oncp.sh                 Create a.cpp and empty in.txt, out.txt, mout.txt
+  $ oncp.sh --dir PATH      Use PATH as the template directory for this invocation
+  $ oncp.sh -n COUNT        Create COUNT source files: a.cpp, b.cpp, c.cpp, ...
+  $ oncp.sh -t INDEX        Create only tINDEX.cpp
+  $ oncp.sh -c NAME         Create NAME.cpp from the configured template
+  $ oncp.sh -h, --help      Show this help
 
 Configuration:
   Edit TEMPLATE_DIR and TEMPLATE_FILE near the top of the oncp script.
   The template file must exist inside TEMPLATE_DIR.
 
 Examples:
-  oncp
-  oncp --dir "$HOME/templates/cpp"
-  oncp -n 3
-  oncp --t 1
-  oncp --t buscabinaria
+  $ oncp.sh
+  $ oncp.sh --dir "$HOME/templates/cpp"
+  $ oncp.sh -n 3
+  $ oncp.sh -t 1
+  $ oncp.sh -t buscabinaria
+  $ oncp.sh -c dijkstra
 
 Notes:
-  --dir changes the template directory only for that execution; it does not
-  modify the configured TEMPLATE_DIR.
-  The -n mode creates the input/output files as well as the requested .cpp files.
-  The --t mode creates only the requested tINDEX.cpp file.
+  --dir changes the template directory only for that execution.
+  The -n mode creates input/output files as well as the requested .cpp files.
+  The -t mode creates only the requested tINDEX.cpp file.
+  The -c mode creates only the requested NAME.cpp file.
   Existing files with the same names are overwritten.
 EOF
 }
 
 error() {
-    printf 'oncp: erro: %s\n' "$*" >&2
+    printf 'oncp.sh: erro: %s\n' "$*" >&2
     exit 1
 }
 
@@ -105,6 +99,7 @@ mode="default"
 custom_dir=""
 count=""
 test_index=""
+custom_name=""
 
 if (($# == 0)); then
     mode="default"
@@ -117,9 +112,12 @@ elif (($# == 2)) && [[ "$1" == "--dir" ]]; then
 elif (($# == 2)) && [[ "$1" == "-n" ]]; then
     mode="multiple"
     count=$2
-elif (($# == 2)) && [[ "$1" == "--t" ]]; then
+elif (($# == 2)) && [[ "$1" == "-t" ]]; then
     mode="test"
     test_index=$2
+elif (($# == 2)) && [[ "$1" == "-c" ]]; then
+    mode="custom"
+    custom_name=$2
 else
     usage >&2
     error "invalid arguments"
@@ -144,9 +142,8 @@ case "$mode" in
         [[ "$count" =~ ^[1-9][0-9]*$ ]] ||
             error "COUNT must be a positive integer"
 
-        # Restrict the count to a practical range and avoid shell arithmetic overflow.
         (( count <= 26 )) ||
-            error "COUNT must be last then 26 (a.cpp to z.cpp)"
+            error "COUNT must be at most 26 (a.cpp to z.cpp)"
 
         letters=( {a..z} )
         for ((i = 0; i < count; i++)); do
@@ -158,11 +155,21 @@ case "$mode" in
         ;;
 
     test)
-        [[ -n "$test_index" ]] || error "provide an index after --t"
+        [[ -n "$test_index" ]] || error "provide an index after -t"
         [[ "$test_index" != */* ]] ||
-            error "the index of --t can not have '/'"
+            error "the index of -t cannot have '/'"
 
         copy_template "$template_path" "t${test_index}.cpp"
         printf 'Created file: t%s.cpp\n' "$test_index"
         ;;
+
+    custom)
+        [[ -n "$custom_name" ]] || error "provide a name after -c"
+        [[ "$custom_name" != */* ]] ||
+            error "the name after -c cannot have '/'"
+
+        copy_template "$template_path" "${custom_name}.cpp"
+        printf 'Created file: %s.cpp\n' "$custom_name"
+        ;;
 esac
+
