@@ -3,6 +3,7 @@ using namespace std;
 
 // Types
 using ll = long long;
+using vi = vector<int>;
 
 // Constants
 constexpr ll oo { 1LL << 62 };
